@@ -6,7 +6,7 @@ object PartitionCount {
 
     def partitionCountHelper(n: Int): BigInt = {
       if (n == 0) return 1
-      if (partitionsCounts.isDefinedAt(n)) partitionsCounts(n)
+      if (partitionsCounts.isDefinedAt(n))  return partitionsCounts(n)
 
       val args = LazyList.from(1)
         .zip(LazyList.from(3, 2))
