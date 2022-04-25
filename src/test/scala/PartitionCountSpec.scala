@@ -8,7 +8,7 @@ class PartitionCountSpec extends AnyFlatSpec with should.Matchers {
   it should "return number of ways to partition the given number" in {
     val args = Table(
       ("n", "result"),
-      (0, 1),
+      (0, BigInt(1)),
       (1, 1),
       (2, 2),
       (3, 3),
@@ -19,7 +19,9 @@ class PartitionCountSpec extends AnyFlatSpec with should.Matchers {
       (8, 22),
       (9, 30),
       (10, 42),
-      (11, 56)
+      (11, 56),
+      (66, 2323520),
+      (666, BigInt("11956824258286445517629485"))
     )
 
     forAll(args) {
