@@ -18,11 +18,10 @@ object PartitionCount {
       val result = args
         .map(partitionCountHelper)
         .zip(LazyList.continually(List(1,1,-1,-1)).flatten)
-        .map { case (pn, multiplier) => pn * multiplier }
+        .map { case (pc, multiplier) => pc * multiplier }
         .sum
 
       partitionsCounts(n) = result
-//      println(s"$n = $result")
       result
     }
 
